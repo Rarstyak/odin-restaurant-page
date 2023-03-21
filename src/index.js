@@ -1,1 +1,3 @@
-console.log('TEST');
+import initPage from './init.js';
+
+initPage();

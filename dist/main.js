@@ -1,1 +1,1 @@
-console.log("TEST");
+(()=>{"use strict";!function(){const e=document.querySelector("div#content"),t=document.createElement("img"),n=document.createElement("h1"),c=document.createElement("p");t.src="",n.textContent="BEST IN TOWN",c.textContent="Yum, this place has good food. Second sentence.",e.appendChild(t),e.appendChild(n),e.appendChild(c)}()})();
