@@ -6,8 +6,8 @@ function initHeader() {
     const text = document.createElement('p');
 
     image.src = '';
-    headline.textContent = 'BEST IN TOWN';
-    text.textContent = 'Yum, this place has good food. Second sentence.';
+    headline.textContent = 'Lackadaisy';
+    text.textContent = `Rigbarth's local restaurant.`;
 
     header.appendChild(image);
     header.appendChild(headline);

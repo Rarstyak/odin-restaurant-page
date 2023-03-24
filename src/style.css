@@ -1,0 +1,120 @@
+/* ROOT STYLE */
+
+:root {
+    --color-shop-shelf-back: rgb(39,33,27);
+    --color-shop-shelf-front: rgb(130,102,73);
+
+    --color-shop-background: rgb(234,223,215);
+
+    --color-shop-info-purple: rgb(88,66,133);
+    --color-shop-info-front: rgb(235,235,240);
+    --color-shop-info-back: rgb(220,220,230);
+
+    --color-shop-bg5: rgb(158,126,105);
+    --color-shop-bg6: rgb(121,111,127);
+    --color-shop-bg7: rgb(203,169,120);
+    --color-shop-bg8: rgb(167,161,164);
+    --color-shop-bg9: rgb(212,170,169);
+    --color-shop-bg10: rgb(58,157,142);
+}
+
+html {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--color-shop-background);
+}
+
+body {
+    scrollbar-gutter: stable both-edges;
+}
+
+/* HEADER STYLE */
+
+/* NAV STYLE */
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    padding: 0px;
+    list-style-type: none;
+
+    display: flex;
+    gap: 2rem;
+}
+
+li button[class^='tab']{
+    padding: 1rem 2rem;
+}
+
+/* MAIN STYLE */
+
+main {
+    display: flex;
+    justify-content: center;
+
+    width: 80vw;
+    margin: auto;
+
+    background-color: var(--color-shop-shelf-front);
+}
+
+div[class^='card'] {
+    border: 4px solid red;
+    border-radius: 1rem;
+}
+
+div.card-item {
+    color: white;
+    background-color: var(--color-shop-shelf-back);
+
+    /* Images are 128x128 */
+    display: grid;
+    grid: 
+        'img text' 164px
+        'cost text' 1.5rem
+        / 164px 328px;
+}
+
+div.card-item .card-item-name {
+    grid-area: text;
+
+    background-color: var(--color-shop-info-purple);
+    border-radius: 0.5rem;
+    margin: 0px;
+}
+
+div.card-item .card-item-desc {
+    grid-area: text;
+
+    color: black;
+    background-color: var(--color-shop-info-back);
+    border: 0.5rem solid var(--color-shop-info-front);
+    border-radius: 0.5rem;
+    margin: 0px;
+}
+
+div.card-item .card-item-cost {
+    grid-area: cost;
+    text-justify: center;
+    text-align: center;
+}
+
+div.card-item .card-item-img {
+    grid-area: img;
+    justify-self: center;
+    align-self: center;
+
+    border: 2px dashed var(--color-shop-shelf-front);
+    border-radius: 0.5rem;
+}
+
+div.card-contact {
+    display: grid;
+}
+
+/* FOOTER STYLE */
+
+/* MISC STYLE */

@@ -3,6 +3,8 @@ import tabHomeBuild from './tab-home.js';
 import tabMenuBuild from './tab-menu.js';
 import tabContactBuild from './tab-contact.js';
 
+import './style.css';
+
 (function setUp() {
     const main = document.querySelector('main');
     const tabs = [
