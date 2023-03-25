@@ -19,8 +19,8 @@
 }
 
 html {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background-color: var(--color-shop-background);
 }
 
@@ -52,30 +52,43 @@ li button[class^='tab']{
 /* MAIN STYLE */
 
 main {
-    display: flex;
-    justify-content: center;
-
-    width: 80vw;
-    margin: auto;
-
+    color: white;
     background-color: var(--color-shop-shelf-front);
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 2rem;
 }
 
-div[class^='card'] {
+h2, h3 {
+    text-align: center;
+}
+
+/* div[class^='card'] {
     border: 4px solid red;
     border-radius: 1rem;
+} */
+
+.card-item-container {
+    background-color: var(--color-shop-shelf-back);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(532px, 1fr));
+    justify-items: center;
+    align-items: center;
 }
 
 div.card-item {
-    color: white;
     background-color: var(--color-shop-shelf-back);
 
     /* Images are 128x128 */
     display: grid;
     grid: 
         'img text' 164px
-        'cost text' 1.5rem
+        'cost text' 1.75rem
         / 164px 328px;
+    padding: 1rem;
 }
 
 div.card-item .card-item-name {
@@ -83,7 +96,8 @@ div.card-item .card-item-name {
 
     background-color: var(--color-shop-info-purple);
     border-radius: 0.5rem;
-    margin: 0px;
+    margin: 0rem 0rem 1rem 1rem;
+    padding: 0.5rem 0.5rem;
 }
 
 div.card-item .card-item-desc {
@@ -93,13 +107,24 @@ div.card-item .card-item-desc {
     background-color: var(--color-shop-info-back);
     border: 0.5rem solid var(--color-shop-info-front);
     border-radius: 0.5rem;
-    margin: 0px;
+    margin: 0rem 0.5rem 2rem 1rem;
+
+    position: relative;
+    top: 2rem;
+    left: 0.5rem;
+
+    padding: 0.5rem 0.5rem;
 }
 
 div.card-item .card-item-cost {
     grid-area: cost;
-    text-justify: center;
-    text-align: center;
+    text-align: end;
+    align-self: center;
+    margin: 0px 0.5rem;
+    padding: 0.25rem 0.5rem;
+
+    border: 2px solid var(--color-shop-shelf-front);
+    border-radius: 0.5rem;
 }
 
 div.card-item .card-item-img {
