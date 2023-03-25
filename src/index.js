@@ -6,7 +6,18 @@ import tabContactBuild from './tab-contact.js';
 import './style.css';
 
 (function setUp() {
-    const main = document.querySelector('main');
+    const body = document.querySelector('body');
+
+    const header = document.createElement('header');
+    const nav = document.createElement('nav');
+    const main = document.createElement('main');
+    const footer = document.createElement('footer');
+
+    body.appendChild(header);
+    body.appendChild(nav);
+    body.appendChild(main);
+    body.appendChild(footer);
+
     const tabs = [
         // [0]:tab name, [1]:build function
         ['Home', tabHomeBuild],
