@@ -16,6 +16,9 @@
     --color-shop-bg8: rgb(167,161,164);
     --color-shop-bg9: rgb(212,170,169);
     --color-shop-bg10: rgb(58,157,142);
+
+    --color-bg-button: #8b69c4;
+    --color-bg-footer: #917ac9;
 }
 
 html {
@@ -25,10 +28,34 @@ html {
 }
 
 body {
+    font-family: 'montserrat', arial, helvetica;
     scrollbar-gutter: stable both-edges;
 }
 
 /* HEADER STYLE */
+
+header {
+    background-image: url('./img/town/RF5_Town_03_Restaurant.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 1rem;
+
+    color: white;
+    text-shadow: var(--color-bg-button) 0px 0px 12px;
+    text-align: center;
+}
+
+header h1 {
+    padding: 1rem;
+    margin: 0px;
+}
+
+header p {
+    padding: 3rem;
+    margin: 0px;
+}
 
 /* NAV STYLE */
 
@@ -45,8 +72,19 @@ ul {
     gap: 2rem;
 }
 
-li button[class^='tab']{
+li button[class^='tab'] {
+    border: 0px;
+    border-radius: 2rem;
+    color: white;
+    background-color: var(--color-bg-button);
+    
     padding: 1rem 2rem;
+    font-weight: bold;
+}
+
+li button[class^='tab']:hover {
+    color: var(--color-bg-button);
+    background-color: white;
 }
 
 /* MAIN STYLE */
@@ -90,6 +128,26 @@ div.card-item {
         / 164px 328px;
     padding: 1rem;
 }
+
+@media (max-width: 650px) {
+    .card-item-container {
+        grid-template-columns: repeat(auto-fill, minmax(196px, 1fr));
+    }
+
+    div.card-item {
+        grid: 
+            'img' 164px
+            'cost' 1.75rem
+            / 164px;
+        padding: 1rem;
+    }
+
+    div.card-item .card-item-name,
+    div.card-item .card-item-desc {
+        display: none;
+    }
+}
+
 
 div.card-item .card-item-name {
     grid-area: text;
@@ -141,5 +199,16 @@ div.card-contact {
 }
 
 /* FOOTER STYLE */
+
+footer {
+    background-color: var(--color-bg-footer);
+
+    padding: 1rem;
+
+    font-size: 0.75rem;
+    text-align: center;
+    color: white;
+    overflow-wrap: break-word;
+}
 
 /* MISC STYLE */
