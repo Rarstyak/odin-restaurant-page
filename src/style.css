@@ -103,30 +103,49 @@ h2, h3 {
     text-align: center;
 }
 
-/* div[class^='card'] {
-    border: 4px solid red;
-    border-radius: 1rem;
-} */
+/* Home */
 
-.card-item-container {
+/* Menu */
+
+.card-item-container,
+.card-contact-container {
     background-color: var(--color-shop-shelf-back);
 
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(532px, 1fr));
     justify-items: center;
     align-items: center;
 }
 
-div.card-item {
-    background-color: var(--color-shop-shelf-back);
 
-    /* Images are 128x128 */
+.card-item-container {
+    grid-template-columns: repeat(auto-fill, minmax(532px, 1fr));
+}
+
+.card-contact-container {
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+
+.card-item,
+.card-contact {
+    background-color: var(--color-shop-shelf-back);
     display: grid;
+    padding: 1rem;
+}
+
+.card-item {
+    /* Images are 128x128 */
     grid: 
         'img text' 164px
         'cost text' 1.75rem
         / 164px 328px;
-    padding: 1rem;
+}
+
+.card-contact {
+    /* Images are 64x64 */
+    grid: 
+        'img text' 128px
+        'title text' 1.75rem
+        / 128px 192px;
 }
 
 @media (max-width: 650px) {
@@ -134,22 +153,40 @@ div.card-item {
         grid-template-columns: repeat(auto-fill, minmax(196px, 1fr));
     }
 
-    div.card-item {
+    .card-item {
         grid: 
             'img' 164px
             'cost' 1.75rem
             / 164px;
-        padding: 1rem;
     }
 
-    div.card-item .card-item-name,
-    div.card-item .card-item-desc {
+    .card-item-name,
+    .card-item-desc {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .card-contact-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .card-contact {
+        grid: 
+            'img' 128px
+            'title' 1.75rem
+            / 128px;
+    }
+
+    .card-contact-name,
+    .card-contact-text {
         display: none;
     }
 }
 
 
-div.card-item .card-item-name {
+.card-item-name,
+.card-contact-name {
     grid-area: text;
 
     background-color: var(--color-shop-info-purple);
@@ -158,7 +195,8 @@ div.card-item .card-item-name {
     padding: 0.5rem 0.5rem;
 }
 
-div.card-item .card-item-desc {
+.card-item-desc,
+.card-contact-text {
     grid-area: text;
 
     color: black;
@@ -174,9 +212,8 @@ div.card-item .card-item-desc {
     padding: 0.5rem 0.5rem;
 }
 
-div.card-item .card-item-cost {
-    grid-area: cost;
-    text-align: end;
+.card-item-cost,
+.card-contact-title {
     align-self: center;
     margin: 0px 0.5rem;
     padding: 0.25rem 0.5rem;
@@ -185,17 +222,31 @@ div.card-item .card-item-cost {
     border-radius: 0.5rem;
 }
 
-div.card-item .card-item-img {
+.card-item-cost {
+    grid-area: cost;
+    text-align: end;
+}
+
+.card-contact-title {
+    grid-area: title;
+    text-align: center;
+}
+
+.card-item-img,
+.card-contact-img {
     grid-area: img;
-    justify-self: center;
-    align-self: center;
+    place-self: center;
 
     border: 2px dashed var(--color-shop-shelf-front);
     border-radius: 0.5rem;
 }
 
-div.card-contact {
-    display: grid;
+.card-contact-img {
+    padding: 1rem;
+}
+
+.card-hours-container {
+    text-align: center;
 }
 
 /* FOOTER STYLE */
