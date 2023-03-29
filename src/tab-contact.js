@@ -16,6 +16,7 @@ function makeContact(name, title, number, mail, img) {
     titleE.textContent = title;
     div.appendChild(titleE);
 
+    // Text description with links
     const text = document.createElement('div');
     text.classList.add('card-contact-text');
 
@@ -56,9 +57,9 @@ function makeStaff() {
     container.classList.add('card-contact-container');
     cat.appendChild(container);
 
-    container.appendChild(makeContact('Elsje', 'Owner, Chef', '(123)456-7890', 'mail@real.com', Elsje));
-    container.appendChild(makeContact('Fuuka', 'Server', '(123)456-7890', 'mail@real.com', Fuuka));
-    container.appendChild(makeContact('Priscilla', 'Sister', '(123)456-7890', 'mail@real.com', Priscilla));
+    container.appendChild(makeContact('Elsje', 'Owner, Chef', '(123)456-7890', 'sleepy@zzz.com', Elsje));
+    container.appendChild(makeContact('Fuuka', 'Server', '(123)456-7890', 'shiny@fish.com', Fuuka));
+    container.appendChild(makeContact('Priscilla', 'Sister', '(123)456-7890', 'fluffy@feather.com', Priscilla));
 
     return cat;
 }

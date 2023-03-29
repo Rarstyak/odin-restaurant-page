@@ -38,4 +38,6 @@ import './style.css';
             main.appendChild(div);
         });
     });
+
+    document.querySelector(`button.tab-${tabs[0][0]}-btn`).click();
 })();
